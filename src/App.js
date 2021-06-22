@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+//======== Load Router Components ======== 
+import Users from "./components/users/Index";
+import BookRender from "./components/users/BookRender";
+import ListTable from "./components/users/ListTable";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div>
+        <nav className="header_main">
+            <ul>
+                <li>
+                    <Link to="/">List</Link>
+                </li>
+                <li>
+                    <Link to="/book">Book</Link>
+                </li>
+                <li>
+                    <Link to="/users">Users Table</Link>
+                </li>
+            </ul>
+        </nav>
+
+        <Switch>
+            <Route path="/book"> <BookRender /> </Route>
+            <Route path="/users"> <Users /> </Route>
+            <Route path="/">  <ListTable /> </Route>
+        </Switch>
     </div>
+  </Router>
   );
 }
 

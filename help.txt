@@ -1,0 +1,30 @@
+/======= json server =========
+- https://jsonplaceholder.typicode.com/guide/
+
+/=========== Packages ================== 
+- https://www.npmjs.com/package/@react-pdf/renderer
+- https://github.com/dmk99/react-pdf-table
+- https://www.npmjs.com/package/file-saver 
+- npm install babel-loader --save-dev
+
+
+/=========== Helps ================== 
+- https://snyk.io/advisor/npm-package/react-table-pdf
+- https://reactnative.dev/docs/flexbox
+- https://css-tricks.com/accessible-simple-responsive-tables/
+- https://codepen.io/nordstromdesign/pen/pbdwJv
+- https://stackoverflow.com/questions/56373850/how-can-i-create-a-table-using-the-react-pdf-library-for-generation-pdf-report
+- https://kags.me.ke/post/generate-dynamic-pdf-incoice-using-react-pdf/ 
+- https://gist.github.com/JacobFischer/aecbd871cb2aae46993236f65797da5c
+- https://react-pdf.org/repl
+- https://react-pdf.org/advanced
+- https://www.pdftron.com/blog/react/react-to-pdf/
+- https://github.com/diegomura/react-pdf/issues/487
+
+
+
+/=========== XLS ============
+- https://github.com/rdcalle/react-export-excel
+- https://securedeveloper.github.io/react-data-export/
+- https://stackoverflow.com/questions/55967962/how-to-create-an-excel-file-in-react-js-with-custom-headings-and-styles-while-do
+
