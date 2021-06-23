@@ -24,10 +24,10 @@
 
 
 /=========== XLS ============
----- Sheet js ----
-
+---- Sheet js ---- 
 - https://github.com/SheetJS/sheetjs
 - https://www.npmjs.com/package/sheetjs-style
+- https://programmer.group/xsirrionx-js-xlsx-set-basic-style-to-output-excel-file.html
 - https://developpaper.com/sheetjs-js-xlsx-module-learning-guide/
 - ***https://www.programmersought.com/article/91616000746/
 - ***https://www.programmersought.com/article/78987250378/
