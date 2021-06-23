@@ -24,7 +24,72 @@
 
 
 /=========== XLS ============
+---- Sheet js ----
+
+- https://github.com/SheetJS/sheetjs
+- https://www.npmjs.com/package/sheetjs-style
+- https://developpaper.com/sheetjs-js-xlsx-module-learning-guide/
+- ***https://www.programmersought.com/article/91616000746/
+- ***https://www.programmersought.com/article/78987250378/
+- *https://www.programmersought.com/article/15446458169/
+
+- https://stackoverflow.com/questions/53516403/sheetjs-xlsx-how-to-write-merged-cells
+- https://www.programmersought.com/article/99062852580/
+- https://www.programmersought.com/article/44973971927/
+- https://www.programmersought.com/article/67706487527/
+- https://www.programmersought.com/article/91616000746/
+- https://github.com/SheetJS/sheetjs/tree/master/demos/react
+- ***https://www.programmersought.com/article/38166312266/
+- https://www.programmersought.com/article/2415585898/
+- *https://www.programmersought.com/article/90285702097/
+- https://www.programmersought.com/article/44127881829/ 
+- https://redstapler.co/sheetjs-tutorial-create-xlsx/ 
+- https://github.com/SheetJS/sheetjs/tree/master/demos/react 
+- https://jsfiddle.net/qL4amurx/
+- https://codepen.io/VehpuS/pen/xorRMp
+- https://lifesaver.codes/answer/change-header%C2%B4s-title-when-using-json-to-sheet
+- https://stackoverflow.com/questions/53516403/sheetjs-xlsx-how-to-write-merged-cells
+- http://5.9.10.113/64134612/how-to-add-styling-to-an-xlsx-file-from-react
+
+const merge = [
+  { s: { r: 1, c: 0 }, e: { r: 2, c: 0 } },{ s: { r: 3, c: 0 }, e: { r: 4, c: 0 } },
+];
+ws["!merges"] = merge;
+
+Use this code for merge A2:A3 ({ s: { r: 1, c: 0 }, e: { r: 2, c: 0 } }) and A4:A5 ({ s: { r: 3, c: 0 }, e: { r: 4, c: 0 } })
+
+Here s = start, r = row, c=col, e= end
+
+
+> require('xlsx').readFile('merge_cells.xlsx').Sheets.Merge['!merges']
+[ { s: { c: 0, r: 0 }, e: { c: 1, r: 1 } },  // <-- The cell A1 represents the range A1:B2
+  { s: { c: 2, r: 0 }, e: { c: 2, r: 1 } },  // <-- The cell C1 represents the range C1:C2
+  { s: { c: 0, r: 2 }, e: { c: 1, r: 2 } },  // <-- The cell A3 represents the range A3:B3
+  { s: { c: 3, r: 0 }, e: { c: 3, r: 1 } },  // <-- The cell D1 represents the range D1:D2
+  { s: { c: 0, r: 3 }, e: { c: 1, r: 3 } } ] // <-- The cell A4 represents the range A4:B4
+
+
+----------  exceljs ---------------
+- https://github.com/exceljs/exceljs
+
+
+
+------------- export-excel ------------
 - https://github.com/rdcalle/react-export-excel
+- *https://www.c-sharpcorner.com/article/how-to-export-data-to-excel-in-reactjs/
+- *https://morioh.com/p/0279e1dcc8a1
+- *https://dzone.com/articles/how-to-export-data-to-excel-in-reactjs
+
+- https://github.com/rdcalle/react-export-excel  
 - https://securedeveloper.github.io/react-data-export/
 - https://stackoverflow.com/questions/55967962/how-to-create-an-excel-file-in-react-js-with-custom-headings-and-styles-while-do
+- https://stackoverflow.com/questions/57930076/how-can-i-style-cells-in-react-export-excel
+- https://github.com/securedeveloper/react-data-export/blob/master/types/types.md
+- https://github.com/securedeveloper/react-data-export/blob/master/examples/styled_excel_sheet.md
+
+/================== Grid ==================
+- https://www.ag-grid.com/react-grid/excel-export/
+- https://www.grapecity.com/wijmo
+- https://www.grapecity.com/wijmo/demos/Grid/Merging/CellMerging/react
+- https://bossanova.uk/jspreadsheet/v3/
 

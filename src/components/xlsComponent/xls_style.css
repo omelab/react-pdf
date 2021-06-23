@@ -1,0 +1,16 @@
+table {
+  display: table;
+  border-collapse: collapse;
+}
+table th {
+  border: 1px solid #181823;
+  padding: 5px 15px;
+  background: #505075;
+  color: #fff;
+}
+table td {
+  border: 1px solid #181823;
+  padding: 5px 15px;
+  background: #fff;
+  color: #181823;
+}

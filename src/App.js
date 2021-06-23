@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-//======== Load Router Components ======== 
-import Users from "./components/users/Index";
+//======== Load Router Components ========  
 import BookRender from "./components/users/BookRender";
 import ListTable from "./components/users/ListTable";
+import XlsComponent from "./components/xlsComponent";
 
 
 function App() {
@@ -20,15 +20,15 @@ function App() {
                     <Link to="/book">Book</Link>
                 </li>
                 <li>
-                    <Link to="/users">Users Table</Link>
+                    <Link to="/xls">Xls</Link>
                 </li>
             </ul>
         </nav>
 
         <Switch>
             <Route path="/book"> <BookRender /> </Route>
-            <Route path="/users"> <Users /> </Route>
-            <Route path="/">  <ListTable /> </Route>
+            <Route path="/xls"> <XlsComponent /> </Route>
+            <Route path="/"> <ListTable /> </Route>
         </Switch>
     </div>
   </Router>

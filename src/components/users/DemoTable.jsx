@@ -44,6 +44,7 @@ const DemoTable = () => {
                         <TableCell weighting={10}  style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px', fontSize:10}}> Phone </TableCell>
                         <TableCell weighting={10}  style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px', fontSize:10}}> Website </TableCell> 
                     </TableHeader> 
+
                     <TableBody>
                         <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={2}  getContent={(r) => r.id}/>
                         <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={10} getContent={(r) => r.name}/>
@@ -53,24 +54,25 @@ const DemoTable = () => {
                         <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={10} getContent={(r) => r.website}/> 
                     </TableBody>
                 </Table>  
+
                 <Text><br/> &nbsp;</Text>
-                <Table
-                    data={post} 
-                > 
+                <Table data={post} > 
                     <TableHeader>
                         <TableCell weighting={2}   style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px', fontSize:10}}> ID </TableCell>
                         <TableCell weighting={10}  style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px'}}> Title </TableCell>
-                        <TableCell weighting={10}  style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px'}}> Body </TableCell> 
+                        <TableCell weighting={20}  style={{backgroundColor:'#353554', color:'#fff', textAlign:'center', padding:'5px 10px'}}> Body </TableCell> 
                     </TableHeader> 
                     <TableBody>
-                        <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={2}  getContent={(r) => r.userId}/>
-                        <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={10} getContent={(r) => r.title}/>
-                        <DataTableCell style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} weighting={10} getContent={(r) => r.body}/> 
+                        <DataTableCell weighting={2}  style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} getContent={(r) => r.userId}/>
+                        <DataTableCell weighting={10} style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} getContent={(r) => r.title}/>
+                        <DataTableCell weighting={20} style={{ padding:'5px 10px', overflow:'hidden', fontSize:8}} getContent={(r) => r.body}/> 
                     </TableBody>
                 </Table>   
+
                 <Text style={styles.pageNumber} render={({ pageNumber, totalPages }) => (
                     `${pageNumber} / ${totalPages}`
                 )} fixed />
+                
             </Page>
         </Document>
     )
