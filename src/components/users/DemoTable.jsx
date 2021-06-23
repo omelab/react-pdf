@@ -23,8 +23,7 @@ const DemoTable = () => {
         getUserInfo();
         getPost();
     }, []);
-
-    console.log(state);
+ 
 
     return ( 
         <Document>

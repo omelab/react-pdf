@@ -93,3 +93,7 @@ Here s = start, r = row, c=col, e= end
 - https://www.grapecity.com/wijmo/demos/Grid/Merging/CellMerging/react
 - https://bossanova.uk/jspreadsheet/v3/
 
+
+
+/========= string operation ==============
+- https://www.digitalocean.com/community/tutorials/js-capitalizing-strings

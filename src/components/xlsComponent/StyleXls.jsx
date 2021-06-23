@@ -1,16 +1,29 @@
-import React  from 'react';
+import React, {useEffect, useState} from 'react';
 // import XLSX from 'xlsx'; 
 import XLSX from 'sheetjs-style';
 import './xls_style.css'
 
-function XlsComponent(props) {  
+function StyleXls() { 
+    const [jsonData, setJsonData] = useState([]);
+
+    //get user info
+    const getJsonData = () => { 
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => response.json())
+        .then((data) => setJsonData(data)); 
+    }
+    
+    //load data
+    useEffect(() => { 
+        getJsonData();
+    }, [])
 
     const handleDownload = () => { 
         // Data to be exported
-        let exportArr = props.data||[];
+        let exportArr = jsonData||[];
 
         // Customize the downloaded header, pay attention to the array in the array
-        let Header = props.header||[];
+        let Header = ['ID','Name','User Name','Email','Address','Phone', 'Website', 'Company'];
 
         // Description in the official document: converts an array of arrays of JS data to a worksheet.
         const headerWs = XLSX.utils.aoa_to_sheet([Header]);
@@ -69,10 +82,10 @@ function XlsComponent(props) {
         };
         
         const celLimit = Header.length||0;
-        const headRange = {s:{c:0, r:0}, e:{c:celLimit, r:0}};
+        const headeRange = {s:{c:0, r:0}, e:{c:celLimit, r:0}};
 
-        for (let R = headRange.s.r; R <= headRange.e.r; ++R) {
-            for (let C = headRange.s.c; C <= headRange.e.c; ++C) {
+        for (let R = headeRange.s.r; R <= headeRange.e.r; ++R) {
+            for (let C = headeRange.s.c; C <= headeRange.e.c; ++C) {
                 let cell_address = {
                     c: C,
                     r: R
@@ -124,16 +137,14 @@ function XlsComponent(props) {
         XLSX.utils.book_append_sheet(wb, ws, "sheet 01");
 
         /* Generate xlsx file */
-        let fileName = props.fileName ||'Download';
-        XLSX.writeFile(wb, `${fileName}.xlsx`); 
+        XLSX.writeFile(wb, "Download.xlsx"); 
     } 
 
     return (
         <div> 
-            <button onClick={()=>handleDownload()}> {props.buttonText || "Export xlsx"} </button> 
+            <button onClick={()=>handleDownload()}> Export </button> 
         </div>
-    ) 
-} 
-export default XlsComponent
+    )
 
- 
+} 
+export default StyleXls;
